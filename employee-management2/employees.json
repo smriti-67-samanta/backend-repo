@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "position": "Software Developer",
+      "department": "Engineering",
+      "salary": 80000,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "position": "HR Manager",
+      "department": "Human Resources",
+      "salary": 75000,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": "Mike Johnson",
+      "position": "Product Manager",
+      "department": "Product",
+      "salary": 90000,
+      "status": "active"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Fix login page",
+      "description": "Fix the responsive design issues on login page",
+      "tag": "frontend",
+      "priority": "high",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "title": "Database optimization",
+      "description": "Optimize database queries for better performance",
+      "tag": "backend",
+      "priority": "medium",
+      "status": "in progress"
+    },
+    {
+      "id": 3,
+      "title": "Add user authentication",
+      "description": "Implement JWT authentication system",
+      "tag": "backend",
+      "priority": "high",
+      "status": "pending"
+    }
+  ]
+}

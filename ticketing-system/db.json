@@ -1,0 +1,20 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "title": "Login Issue",
+      "description": "Unable to login to the system",
+      "priority": "high",
+      "user": "John Doe",
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "title": "Email Not Working",
+      "description": "Cannot send emails",
+      "priority": "medium",
+      "user": "Jane Smith",
+      "status": "pending"
+    }
+  ]
+}

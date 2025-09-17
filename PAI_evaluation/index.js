@@ -1,23 +1,24 @@
-const express=require('express');
-const mongoose=require('mongoose');
-const bodyParser=require('body-parser')
+const express = require('express');
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+require('dotenv').config();
 
-const app= express()
-app.get('/', (req,res)=>{
-    res.send("welcome to my server")
-})
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-app.get('/restaurent', (req,res)=>{
-    res.send("welcome to RESTAURENT ")
-})
 
-app.get('/cuisin', (req,res)=>{
-    res.send("CUISIN")
-})
+app.use(express.json());
+app.use(morgan('dev'));
 
-app.get('/review', (req,res)=>{
-    res.send("REVIEW")
-})
-app.listen(3000,()=>{
-    console.log("Server running on http://localhost:3000")
-})
+
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected successfully!'))
+  .catch(err => console.error('MongoDB connection error:', err));
+
+
+const restaurantRoutes = require('./routes/restaurantRoutes');
+app.use('/api/restaurants', restaurantRoutes);
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
